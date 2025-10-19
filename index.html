@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>টি সাহেব বাড়ী সরকারি প্রাথমিক বিদ্যালয়</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    /* Header */
+    header {background: #003366; color: white; padding: 20px 10px;}
+    .header-inner {max-width: 1100px; margin: auto; display: flex; align-items: center; justify-content: space-between;}
+    .logo {display: flex; align-items: center;}
+    .logo img {height: 80px; margin-right: 15px;}
+    .logo-text {font-size: 24px; font-weight: bold; line-height: 1.3;}
+
+    /* Nav */
+    nav {background: #0055a5;}
+    nav ul {
+      max-width: 1100px;
+      margin: auto;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 12px 15px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+	nav a i {
+	color : #FFFFFF;}
+	
+    nav ul li a:hover,
+    nav ul li a.active {background: #0077cc;}
+
+    /* Hero */
+    .hero {
+      background: url('school_banner.jpg') center center/cover no-repeat;
+      height: 300px;
+      max-width: 1100px;
+      margin: 0px auto;
+      position: relative;
+      border-radius: 8px;
+    }
+    .hero .hero-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 22px;
+    }
+
+       /* খবর সেকশন */
+    .news-container {
+      position: relative;
+      top: 7px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* মূল বক্স */
+    .news-box {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 40px;
+      overflow: hidden;
+      width: 85%;
+      max-width: 1000px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* বাম দিকের খবর লেবেল */
+    .news-label {
+      background: #2f3e9e;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 22px;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    /* ডান দিকের স্ক্রল অংশ */
+    .news-text {
+      position: relative;
+      background: #fff;
+      color: #000;
+      font-size: 18px;
+      font-weight: 500;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      padding: 12px 0;
+    }
+
+    /* স্ক্রল অ্যানিমেশন */
+    .scroll-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 15s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* হোভার করলে থেমে যাবে */
+    .news-text:hover .scroll-text {
+      animation-play-state: paused;
+    }
+
+    /* রেসপন্সিভ */
+    @media (max-width: 600px) {
+      .news-label {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+      .news-text {
+        font-size: 16px;
+
+
+      }
+    }
+
+    /* Main */
+    .main {
+      max-width: 1100px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+    .content, .sidebar div, .contact-form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .sidebar {display: flex; flex-direction: column; gap: 20px;}
+    .principal img {width: 100%; border-radius: 4px;}
+    .principal h3 {text-align: center; margin-top: 10px; font-size: 18px;}
+
+    /* ভর্তি সুবিধা স্টাইল */
+    .admission-box {
+      background: #ffffff;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .admission-box h2 {
+      text-align: center;
+      font-size: 26px;
+      padding: 12px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .admission-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .admission-box ul li {
+      background: #eef6ff;
+      margin: 10px 0;
+      padding: 12px 18px;
+      border-left: 6px solid #ff6a00;
+      border-radius: 8px;
+      font-size: 18px;
+      color: #2c3e50;
+      line-height: 1.6;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .admission-box ul li:hover {
+      background: #dff0ff;
+      transform: translateX(5px);
+    }
+
+    
+    .contact-form button:hover {background: #0077cc;}
+
+    /* Footer */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+    footer a {color: #ffcc00; text-decoration: underline;}
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-inner {flex-direction: column; text-align: center;}
+      nav ul {flex-direction: column;}
+      .main {display: block;}
+    }
+	.info-image {
+  text-align: center;      /* ছবিকে মাঝখানে রাখবে */
+  margin-top: 10px;        /* উপরে একটু ফাঁকা */
+}
+.info-image img {
+  width: 100%;             /* সাইডবারের পুরো প্রস্থ জুড়ে বসবে */
+  border-radius: 8px;      /* হালকা গোলাকার কোণা */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* স্লাইড-শো বক্স */
+.gallery-fade {
+  position: relative;
+  max-width: 1100px;
+  height: 350px;              /* চতুর্ভুজ উচ্চতা */
+  margin-bottom: 10px;
+  margin: 15px auto;          /* নিউজ স্ক্রলারের নিচে ফাঁকা */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #cce7ff;        /* ছবির ফাঁকে হালকা নীল রঙ */
+}
+
+/* প্রতিটি স্লাইড */
+.gallery-fade .fade-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fadeAnimation 12s infinite;
+}
+.gallery-fade .fade-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* একাধিক ছবির জন্য দেরি (delay) */
+.gallery-fade .fade-slide:nth-child(1) { animation-delay: 0s; }
+.gallery-fade .fade-slide:nth-child(2) { animation-delay: 4s; }
+.gallery-fade .fade-slide:nth-child(3) { animation-delay: 8s; }
+
+/* ফেড ইন/আউট ইফেক্ট */
+@keyframes fadeAnimation {
+  0%   {opacity: 0;}
+  10%  {opacity: 1;}   /* ফেড ইন */
+  30%  {opacity: 1;}   /* দৃশ্যমান থাকবে */
+  40%  {opacity: 0;}   /* ফেড আউট */
+  100% {opacity: 0;}
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="logo.png" alt="স্কুল লোগো">
+        <div class="logo-text">
+          টি সাহেব বাড়ী সরকারি প্রাথমিক বিদ্যালয় <br>
+          <h6>নাঙ্গলকোট, কুমিল্লা</h6>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav>
+    <ul>
+         <li><a href="index.html"> <i class="fas fa-home"></i>  প্রথম পাতা</a></li>
+      <li><a href="porichiti.html"><i class="fas fa-info-circle"></i>  পরিচিতি</a></li>
+      <li><a href="jonobol.html"><i class="fas fa-users"></i> জনবল</a></li>
+      <li><a href="shikkharthi.html"> <i class="fas fa-user-graduate"></i>শিক্ষার্থী</a></li>
+      <li><a href="result.html"><i class="fas fa-chart-bar"></i>  ফলাফল</a></li>
+      <li><a href="gallery.html"><i class="fas fa-images"></i> গ্যালারী</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> যোগাযোগ</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ নতুন খবর সেকশন -->
+  <div class="news-container">
+    <div class="news-box">
+      <div class="news-label">খবর:</div>
+      <div class="news-text">
+        <div class="scroll-text">🌼 আমাদের ওয়েবসাইটে স্বাগতম! 📢 ভর্তি বিজ্ঞপ্তি প্রকাশিত হয়েছে || 📅 আগামী সপ্তাহে বার্ষিক ক্রীড়া অনুষ্ঠান অনুষ্ঠিত হবে || 🎓 ফলাফল প্রকাশ করা হবে ২৫ অক্টোবর।</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ✅ স্লাইড-শো শুরু -->
+<div class="gallery-fade">
+  <div class="fade-slide">
+    <img src="school1.jpg" alt="বিদ্যালয় ছবি ১">
+  </div>
+  <div class="fade-slide">
+    <img src="school2.jpg" alt="বিদ্যালয় ছবি ২">
+  </div>
+  <div class="fade-slide">
+    <img src="school4.jpg" alt="বিদ্যালয় ছবি ৩">
+  </div>
+</div>
+  <div class="hero">
+    <div class="hero-text">“শিক্ষাই জাতির মেরুদন্ড”</div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="content">
+      <h2>নোটিশ বোর্ড</h2>
+      <ul type="disc">
+        <li>২০২৫ শিক্ষাবর্ষের ভর্তি বিজ্ঞপ্তি প্রকাশিত হয়েছে।</li>
+        <li>বার্ষিক ক্রীড়া অনুষ্ঠান আগামী ৫ই মার্চ অনুষ্ঠিত হবে।</li>
+        <li>শিক্ষার্থীদের মাতাপিতা দিবস উদযাপন আগামী শুক্রবার।</li>
+      </ul>
+
+      <!-- ভর্তি সুবিধা সেকশন -->
+      <div class="admission-box">
+        <h2>📜 জেনে নিন কেন আপনার সন্তানকে সরকারি প্রাথমিক বিদ্যালয়ে ভর্তি করাবেন</h2>
+        <ul>
+          <li>📚 বছরের প্রথমেই বিনামূল্যে বই প্রদান করা হয়।</li>
+          <li>💡 বিনা বেতনে অধ্যায়নের সুযোগ এবং শতভাগ উপবৃত্তি প্রদান।</li>
+          <li>👩‍🏫 নিরাপদ ও মনোরম পরিবেশে অভিজ্ঞ উচ্চ শিক্ষিত, প্রশিক্ষণপ্রাপ্ত শিক্ষক দ্বারা পাঠদান।</li>
+          <li>🎨 মেধা বিকাশের জন্য খেলাধুলা, সঙ্গীত, কাব, চিত্রাংকন ও বিতর্ক প্রতিযোগিতা।</li>
+          <li>🏆 সমাপনী পরীক্ষায়  100% পাশের হার ও প্রাথমিক বৃত্তির জন্য বিশেষ পাঠদানের ব্যবস্থা।</li>
+          <li>🕌 নৈতিক ও ধর্মীয় শিক্ষায় বিশেষ গুরুত্বারোপ।</li>
+          <li>💻 মাল্টিমিডিয়ার মাধ্যমে আকর্ষণীয়ভাবে পাঠদান।</li>
+          <li>🌏 জাতীয় পর্যায়ে বিভিন্ন প্রোগ্রামে অংশগ্রহণের সুযোগ।</li>
+          <li>🧩 শ্রেণি পাঠদানে বাস্তব উপকরণ ব্যবহার।</li>
+          <li>📖 অতিরিক্ত পাঠ্য বইয়ের চাপ নেই।</li>
+          <li>🚍 দৈনিক সমাবেশ সহ বার্ষিক শিক্ষা সফরের ব্যবস্থা।</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="principal">
+        <h3>প্রধান শিক্ষক</h3>
+        <img src="principal.jpg" alt="প্রধান শিক্ষকের ছবি">
+        <p style="text-align:center">আয়েশা খাতুন</p>
+      </div>
+      <div class="recent-news">
+        <h3>গুরুত্বপূর্ণ লিংক</h3>
+		<ul>
+        <li> <a href="https://www.teachers.govt.bd">শিক্ষক বাতায়ন </a> </li>
+       <li> <a href="https://www.dep.govt.bd">প্রাথমিক শিক্ষা বোর্ড</a> </li>
+      </ul>
+	  </div>
+	  <div class="info-image">
+  <img src="info.png" alt="তথ্য ছবি">
+</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; ২০২৫ টি সাহেব বাড়ী সরকারি প্রাথমিক বিদ্যালয়, নাঙ্গলকোট, কুমিল্লা।</p>
+  </footer>
+
+</body>
+</html>
